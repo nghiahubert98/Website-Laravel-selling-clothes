@@ -4,7 +4,7 @@
 
   <section id="product">
     <div class="container">
-     <!--  breadcrumb --> 
+     <!--  breadcrumb -->
       <ul class="breadcrumb">
         <li>
           <a href="#">Trang chủ</a>
@@ -13,7 +13,7 @@
         <li class="active">Tài khoản của tôi</li>
       </ul>
       <div class="row">
-        
+
         <!-- My Account-->
         <div class="col-lg-9">
             <h1 class="heading1"><span class="maintext">Lịch sử giao dịch</span><span class="subtext">Xem tất cả đơn hàng</span></h1>  
@@ -47,7 +47,7 @@
                 </tbody>
               </table>
             </div>
-     
+
         </div>
         <!-- Sidebar Start-->
           <aside class="col-lg-3">
