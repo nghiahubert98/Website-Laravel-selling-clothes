@@ -5,12 +5,10 @@
   <!-- Slider Start-->
   @include('user.blocks.slider')
   <!-- Slider End-->
-  
-  <!-- Section Start-->
-  @include('user.blocks.otherdetail')
-  <!-- Section End-->
 
-<!--  Best Seller -->  
+
+
+<!--  Best Seller -->
 <section id="featured" class="row mt40">
   <div class="container">
     <h1 class="heading1"><span class="maintext">Sản phẩm bán chạy nhất</span><span class="subtext"> Xem những sản phẩm bán chạy nhất của chúng tôi</span></h1>
@@ -30,9 +28,9 @@
           @if($bsl->price_new != 0)
           <span class="sale tooltip-test">Sale</span>
           @endif
-          
+
           <a href="{!! url('product-detail',[ $bsl->id, $bsl->alias]) !!}"><img width="260" height="355" alt="" src="{!! asset('resources/upload/'. $bsl->image) !!}"></a>
-          
+
 <!--           <div class="shortlinks">
             <a class="details" href="#">DETAILS</a>
             <a class="wishlist" href="#">WISHLIST</a>
@@ -101,4 +99,7 @@
     </ul>
   </div>
 </section>
+  <!-- Section Start-->
+  @include('user.blocks.otherdetail')
+  <!-- Section End-->
 @endsection

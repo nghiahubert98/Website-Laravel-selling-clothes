@@ -7,7 +7,7 @@
   <div class="otherddetailspart">
     <div class="innerclass payment">
       <h2>Thanh toán dễ dàng</h2>
-      Hổ trợ cổng thanh toán trực tuyến </div>
+      Hổ trợ cổng thanh toán trực tuyến Paypal </div>
   </div>
   <div class="otherddetailspart">
     <div class="innerclass shipping">
@@ -16,7 +16,7 @@
   </div>
   <div class="otherddetailspart">
     <div class="innerclass choice">
-      <h2>Hơn 5000 sự lựa chọn</h2>
-      50,000+ Sản phẩm </div>
+      <h2>Hơn 1000 sự lựa chọn</h2>
+      1000+ Sản phẩm </div>
   </div>
 </section>
