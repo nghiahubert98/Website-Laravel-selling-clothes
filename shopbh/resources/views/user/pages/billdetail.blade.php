@@ -3,7 +3,7 @@
 
 <section id="billdetail">
     <div class="container">
-     <!--  breadcrumb --> 
+     <!--  breadcrumb -->
       <ul class="breadcrumb">
         <li>
           <a href="#">Trang chủ</a>
@@ -67,7 +67,7 @@
 
 
 <table class="table table-bordered table-hover" role="grid" aria-describedby="example2_info">
-    <thead>  
+    <thead>
         <th class="sorting col-md-1" >ID</th>
         <th class="sorting_asc col-md-4">Product Name</th>
         <th class="sorting col-md-2">Size</th>
@@ -81,16 +81,16 @@
             <td>{!! $bill->product_name !!}</td>
             <td>{!! $bill->size !!}</td>
             <td>{!! $bill->quantity !!}</td>
-            <td>${!! $bill->unit_price*$bill->quantity !!}</td>
+            <td>{!! number_format($bill->unit_price*$bill->quantity,2) !!} đ</td>
         </tr>
         @endforeach
         <tr>
             <td colspan="4"><b>VAT (5%)</b></td>
-            <td colspan="1"><b class="text-red">${!! number_format($customerInfo->total/1.05*0.05,1) !!}</b></td>
+            <td colspan="1"><b class="text-red">{!! number_format($bill->unit_price*$bill->quantity*0.05,2) !!} đ</b></td>
         </tr>
         <tr>
             <td colspan="4"><b>Total Pay</b></td>
-            <td colspan="1"><b style="color: red;">${!! $customerInfo->total !!}</b></td>
+            <td colspan="1"><b style="color: red;">{!! number_format($bill->unit_price*$bill->quantity*1.05,2) !!} đ</b></td>
         </tr>
     </tbody>
 </table>
