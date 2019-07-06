@@ -81,7 +81,7 @@ Route::post('checkout',['as'=>'postcheckout','uses'=>'PageController@postCheckou
 Route::get('contact',['as'=>'contact','uses'=>'PageController@getContact']);
 Route::post('contact',['as'=>'contact','uses'=>'PageController@postContact']);
 Route::get('search',['as'=>'search','uses'=>'PageController@postSearch']);
-
+Route::get('billdetail/{id}',['as'=>'billdetail','uses'=>'PageController@getBillDetail']);
 
 
 Route::get('login',['as'=>'login','uses'=>'Auth\LoginController@getLogin']);

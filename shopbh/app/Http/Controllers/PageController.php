@@ -362,7 +362,21 @@ class PageController extends Controller
         }
         
     }
-
+    public function getBillDetail($id){
+        $customerInfo = DB::table('orders')
+                        ->join('users', 'users.id', '=', 'orders.user_id')
+                        ->select('orders.*', 'users.fullname as fullname', 'users.email as email', 'users.address as address', 'users.phone as phone')
+                        ->orderBy('orders.id','desc')
+                        ->where('orders.id', '=', $id)
+                        ->first();
+        $billInfo = DB::table('orders')
+                    ->join('order_details', 'orders.id', '=', 'order_details.order_id')
+                    ->leftjoin('products', 'order_details.product_id', '=', 'products.id')
+                    ->where('orders.id', '=', $id)
+                    ->select('orders.*', 'order_details.*', 'products.name as product_name')
+                    ->get();
+        return view('user.pages.billdetail',compact('customerInfo','billInfo'));
+    }
     public function postCheckout(Request $request){
         $cartInfor = Cart::content();
         if(Cart::count() != 0){

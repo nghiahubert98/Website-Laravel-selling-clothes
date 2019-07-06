@@ -28,7 +28,7 @@
                 <tbody>
                   @foreach($orders as $item)
                   <tr>
-                    <td>{!! $item->id !!} <a href="#" style="color: Blue; float: right;">Chi tiết</a></td>
+                    <td>{!! $item->id !!} <a href="{!! url('billdetail', $item->id) !!}" style="color: Blue; float: right;">Chi tiết</a></td>
                     <td>{!! $item->date_order !!}</td>
                     <td>
                       @if($item->status == 0)
