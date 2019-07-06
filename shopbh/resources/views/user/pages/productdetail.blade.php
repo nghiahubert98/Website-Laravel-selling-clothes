@@ -4,7 +4,7 @@
 
 
   <section id="product">
-    <div class="container">      
+    <div class="container">
       <!-- Product Details-->
       <div class="row">
        <!-- Left Image-->
@@ -24,7 +24,7 @@
             @endforeach
           </ul>
           <span>Di chuyển chuột tới để phóng to</span>
-          
+
           <ul class="thumbnails mainimage">
             <li class="producthtumb">
               <a class="thumbnail" >
@@ -78,7 +78,7 @@
                     <div class="col-lg-5">
                         <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" >
                     </div>
-                    
+
                 </div>
                 @include('admin.blocks.error')
                 <div class="clear"></div>
@@ -99,15 +99,15 @@
                   </div>
                 </div> -->
               </div>
-              
+
               @if($product_detail->status == 0)
                 <button disabled type="submit" class="btn btn-orange" style="font-size: 20px"><span class="glyphicon glyphicon-shopping-cart"></span> Thêm vào giỏ hàng</button>
               @else
               <button type="submit" class="btn btn-orange" style="font-size: 20px"><span class="glyphicon glyphicon-shopping-cart"></span> Thêm vào giỏ hàng</button>
               @endif
-              
+
             </form>
-  
+
          <!-- Product Description tab & comments-->
          <div class="productdesc">
                 <ul class="nav nav-tabs" id="myTab">
@@ -124,7 +124,7 @@
                     {!! $product_detail->content !!}
                   </div>
                   <div class="tab-pane" id="description">
-                    
+
                     {!! $product_detail->description !!}
 
                   </div>
@@ -189,7 +189,7 @@
   </section>
   <!-- Popular Brands-->
   <section id="popularbrands" class="container">
-    <h1 class="heading1"><span class="maintext">Nhản hiệu phổ biến</span><span class="subtext"> Xem các nhản hiệu phổ biến</span></h1>
+    <h1 class="heading1"><span class="maintext">Nhãn hiệu phổ biến</span><span class="subtext"> Xem các nhãn hiệu phổ biến</span></h1>
     <div class="brandcarousalrelative">
       <ul id="brandcarousal">
         <li><img src="{!! url('user/img/brand1.jpg') !!}" alt="" title=""/></li>

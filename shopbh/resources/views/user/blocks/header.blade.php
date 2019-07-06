@@ -1,7 +1,7 @@
 <div class="headerstrip">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12"> <a href="{{ url('/index')}}" class="logo pull-left"><img align="center" width="170" height="60" src="{!! url('user/img/logo.png') !!}" alt="SimpleOne" title="SimpleOne"></a> 
+            <div class="col-lg-12"> <a href="{{ url('/index')}}" class="logo pull-left"><img align="center" width="170" height="60" src="{!! url('user/img/logo-shop1.png') !!}" alt="ZADOR Shop" title="ZADOR Shop"></a>
                 <!-- Top Nav Start -->
                 <div class="pull-left">
                     <div class="navbar" id="topnav">
@@ -25,7 +25,7 @@
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="min_price" value= {!!$min_price??0!!} >
                         <input type="hidden" name="max_price" value= {!!$max_price??1000000!!}>
-                        <input type="text" id="key_search" name="key_search" class="input-medium search-query" placeholder="Search Here…"> 
+                        <input type="text" id="key_search" name="key_search" class="input-medium search-query" placeholder="Search Here…">
                         <input type="submit" name="search" value="Tìm kiếm">
                     </form>
                 </div>
