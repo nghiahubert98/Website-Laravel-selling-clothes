@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <td>Giới tính</td>
-                        <td>@if($user_detail->gender == 0)
+                        <td>@if($user_detail->gender == 1)
                               Nam
                             @else
                               Nữ
