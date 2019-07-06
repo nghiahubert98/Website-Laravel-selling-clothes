@@ -3,7 +3,7 @@
 1. Cài đặt môi trường:
 	B1: Cài đặt bộ Webserver bất kì nào đó ví dụ như XAMPP, WARMPP,... Sau đó copy mã nguồn vào thư mục htdocs trong thư mục cài webserver
  		Chú ý: Mặc định là shopbh
-	B2: Mở cửa sổ CMD trong Folder chứa mã nguồn và gõ dòng lệnh composer update.
+	B2: Mở cửa sổ CMD trong Folder chứa mã nguồn, nếu chưa tải composer thì tải về và gõ dòng lệnh composer update.
 	B3: Mở mã nguồn bằng chương trình Code (Sublime text, Atom,...) sửa lại thông tin kết nối database trong config/database.php, trước đó phải tạo database mới trước.
 	B4: Chạy lệnh php artisan migrate --seed để import các bảng cơ sở dữ liệu và dữ liệu mẫu.
 	B5: Chạy lệnh php artisan key:generate để khởi tạo keygen cho app.
