@@ -56,10 +56,6 @@
                 <td><span class="bold">{!! Cart::subtotal(); !!}đ</span></td>
               </tr>
               <tr>
-                <td><span class="extra bold">VAT (5%) :</span></td>
-                <td><span class="bold">{!! Cart::tax(); !!}đ</span></td>
-              </tr>
-              <tr>
                 <td><span class="extra bold totalamout">Tổng :</span></td>
                 <td><span class="bold totalamout">{!! Cart::total(); !!}đ</span></td>
               </tr>
