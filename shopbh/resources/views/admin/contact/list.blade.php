@@ -16,7 +16,6 @@
             <th>Date Contact</th>
             <th>Note</th>
             <th>Status</th>
-            <th>Action</th>
             <th>Delete</th>
         </tr>
     </thead>
@@ -36,7 +35,6 @@
                     <span class="glyphicon glyphicon-ok"></span>
                 @endif
             </td>
-            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="">Detail</a></td>
             <td class="center"><i class="fa fa-trash-o fa-fw"></i><a onclick=" return xacnhanxoa('Are you sure you want to delete?')" href="{!! URL::route('admin.contact.getDelete', $item->id) !!}">Delete</a></td>
         </tr>
         @endforeach

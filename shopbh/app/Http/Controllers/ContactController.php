@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+use App\Http\Controllers\Controller;
+use App\Contact;
 use DB;
 
 class ContactController extends Controller
@@ -12,18 +15,10 @@ class ContactController extends Controller
 		return view('admin.contact.list',compact('contact'));
 		
 	}
-	public function getEdit($id){
-		return view('admin.bill.detail',compact('customerInfo','billInfo'));
-	}
-	public function postEdit(Request $request, $id)
-    {
-
-        return redirect()->route('admin.bill.list')->with(['flash_level'=>'success','flash_message'=>'Update Order Complete Success!']);
-    }
     public function getDelete($id)
     {
-        $bill = Order::find($id);
-        $bill->delete();
-        return redirect()->route('admin.bill.list')->with(['flash_level'=>'success','flash_message'=>'Delete Order Complete Success!']);
+        $bill = Contact::find($id);
+        $bill->delete($id);
+        return redirect()->route('admin.contact.list')->with(['flash_level'=>'success','flash_message'=>'Delete Order Complete Success!']);
     }
 }
