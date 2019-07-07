@@ -70,10 +70,6 @@
         </tr>
         @endforeach
         <tr>
-            <td colspan="4"><b>VAT (5%)</b></td>
-            <td colspan="1"><b class="text-red">${!! number_format($customerInfo->total/1.05*0.05,1) !!}</b></td>
-        </tr>
-        <tr>
             <td colspan="4"><b>Total Pay</b></td>
             <td colspan="1"><b style="color: red;">${!! $customerInfo->total !!}</b></td>
         </tr>

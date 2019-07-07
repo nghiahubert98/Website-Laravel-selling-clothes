@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 05, 2019 lúc 11:35 AM
+-- Thời gian đã tạo: Th7 07, 2019 lúc 04:11 PM
 -- Phiên bản máy phục vụ: 10.1.38-MariaDB
 -- Phiên bản PHP: 7.3.3
 
@@ -132,7 +132,8 @@ CREATE TABLE `contacts` (
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `note`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'Hoàng Trọng Nghĩa', '16521747@gm.uit.edu.vn', '0976948672', 'Tôi muốn hoàng trả hàng bị lỗi', '0', '2019-06-27 13:08:34', '2019-06-27 13:08:34'),
-(2, 'Hoàng Thái', '16521748@gm.uit.edu.vn', '0976948673', 'Muốn tư vấn về áo sơ mi nam tốt', '0', '2019-06-27 13:09:10', '2019-06-27 13:09:10');
+(2, 'Hoàng Thái', '16521748@gm.uit.edu.vn', '0976948673', 'Muốn tư vấn về áo sơ mi nam tốt', '0', '2019-06-27 13:09:10', '2019-06-27 13:09:10'),
+(3, 'Hoàng Văn Nghĩa', '16521749@gm.uit.edu.vn', '0976948672', 'Bảo hành Điện thoại cho tôi', '0', '2019-07-07 06:02:17', '2019-07-07 06:02:17');
 
 -- --------------------------------------------------------
 
@@ -184,14 +185,8 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `date_order`, `total`, `payment`, `status`, `note`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, '2019-06-27 19:58:41', 635250, 'Cash On Delivery', '3', '', 1, '2019-06-27 12:58:41', '2019-06-27 13:00:59'),
-(2, '2019-06-27 19:59:52', 617100, 'Cash On Delivery', '0', '', 2, '2019-06-27 12:59:52', '2019-06-27 12:59:52'),
-(3, '2019-06-27 20:05:45', 2456300, 'Cash On Delivery', '0', '', 3, '2019-06-27 13:05:45', '2019-06-27 13:05:45'),
-(4, '2019-06-29 10:06:02', 998250, 'Cash On Delivery', '1', '', 10, '2019-06-29 03:06:02', '2019-06-29 03:22:34'),
-(5, '2019-06-30 18:26:47', 5578100, 'Cash On Delivery', '0', '', 0, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(6, '2019-06-30 19:00:14', 465850, 'ByPayPal', '0', '', 1, '2019-06-30 12:00:14', '2019-06-30 12:00:14'),
-(7, '2019-07-01 21:42:03', 2.42, 'instant', '0', '', 2, '2019-07-01 14:42:03', '2019-07-01 14:42:03'),
-(8, '2019-07-02 15:23:43', 2.42, 'instant', '0', '', 1, '2019-07-02 08:23:43', '2019-07-02 08:23:43');
+(10, '2019-07-07 21:06:44', 485000, 'Cash On Delivery', '0', '', 0, '2019-07-07 14:06:44', '2019-07-07 14:06:44'),
+(11, '2019-07-07 21:08:22', 520000, 'Cash On Delivery', '0', '', 0, '2019-07-07 14:08:22', '2019-07-07 14:08:22');
 
 -- --------------------------------------------------------
 
@@ -215,32 +210,10 @@ CREATE TABLE `order_details` (
 --
 
 INSERT INTO `order_details` (`id`, `quantity`, `unit_price`, `size`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 100000, 'S', 54, 1, '2019-06-27 12:58:41', '2019-06-27 12:58:41'),
-(2, 1, 425000, '30', 53, 1, '2019-06-27 12:58:41', '2019-06-27 12:58:41'),
-(3, 1, 225000, '30', 55, 2, '2019-06-27 12:59:52', '2019-06-27 12:59:52'),
-(4, 1, 285000, 'S', 52, 2, '2019-06-27 12:59:52', '2019-06-27 12:59:52'),
-(5, 1, 270000, 'M', 26, 3, '2019-06-27 13:05:45', '2019-06-27 13:05:45'),
-(6, 2, 420000, 'L', 23, 3, '2019-06-27 13:05:45', '2019-06-27 13:05:45'),
-(7, 1, 340000, 'S', 27, 3, '2019-06-27 13:05:45', '2019-06-27 13:05:45'),
-(8, 1, 260000, 'S', 38, 3, '2019-06-27 13:05:45', '2019-06-27 13:05:45'),
-(9, 2, 160000, 'M', 37, 3, '2019-06-27 13:05:45', '2019-06-27 13:05:45'),
-(10, 1, 260000, 'S', 38, 4, '2019-06-29 03:06:02', '2019-06-29 03:06:02'),
-(11, 1, 100000, 'S', 54, 4, '2019-06-29 03:06:02', '2019-06-29 03:06:02'),
-(12, 1, 285000, 'S', 52, 4, '2019-06-29 03:06:02', '2019-06-29 03:06:02'),
-(13, 1, 180000, 'S', 33, 4, '2019-06-29 03:06:02', '2019-06-29 03:06:02'),
-(14, 4, 225000, '30', 55, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(15, 2, 100000, 'S', 54, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(16, 3, 285000, 'S', 52, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(17, 1, 425000, '30', 53, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(18, 1, 360000, 'S', 29, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(19, 1, 420000, 'L', 23, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(20, 3, 340000, 'S', 27, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(21, 1, 270000, 'M', 26, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(22, 1, 160000, 'S', 37, 5, '2019-06-30 11:26:47', '2019-06-30 11:26:47'),
-(23, 1, 100000, 'S', 54, 6, '2019-06-30 12:00:14', '2019-06-30 12:00:14'),
-(24, 1, 285000, 'S', 52, 6, '2019-06-30 12:00:14', '2019-06-30 12:00:14'),
-(25, 1, 2, '30', 55, 7, '2019-07-01 14:42:03', '2019-07-01 14:42:03'),
-(26, 1, 2, '30', 55, 8, '2019-07-02 08:23:43', '2019-07-02 08:23:43');
+(28, 1, 285000, 'S', 52, 10, '2019-07-07 14:06:44', '2019-07-07 14:06:44'),
+(29, 2, 100000, 'S', 54, 10, '2019-07-07 14:06:44', '2019-07-07 14:06:44'),
+(30, 1, 160000, 'S', 37, 11, '2019-07-07 14:08:22', '2019-07-07 14:08:22'),
+(31, 2, 180000, 'S', 33, 11, '2019-07-07 14:08:22', '2019-07-07 14:08:22');
 
 -- --------------------------------------------------------
 
@@ -697,7 +670,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `fullname`, `email`, `password`, `gender`, `address`, `phone`, `level`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
 (0, 'Admin', 'Nghia', '16521747@gm.uit.edu.vn', '$2y$10$Nyr3b9lTxQz7Pzxh25xcgundRw.E3TpMUYoSJyQeGYBfZyVKbtWDG', '1', 'Ktx khu A', '0976948672', 1, 'Offline', 'cvh5OZyJ9zwIw7YCdpZfml0bc2Gti8MKaKs7c36j9I3DX2T451sy9Li4HkIr', '2019-06-20 09:01:25', '2019-06-20 09:01:25'),
-(1, 'User 1', 'Người dùng 1', 'user1@gmail.com', '$2y$10$XRnn.h2g3p8e2grfrCH4n.ok5yd0d/2TmdfDRw5uhA5nc7y0wuK6G', '1', 'ktx khu a, tphcm', '0123466789', 2, 'Offline', 'wPQ18O8zyqXlvZ56n1vSGNdFjSkxc08MOYcZqWmQr4tzMnyMqQ31GswwfPRF', '2019-06-27 03:36:28', '2019-06-27 03:36:28'),
+(1, 'User 1', 'Người dùng 1', 'user1@gmail.com', '$2y$10$XRnn.h2g3p8e2grfrCH4n.ok5yd0d/2TmdfDRw5uhA5nc7y0wuK6G', '1', 'ktx khu a, tphcm', '0123466789', 2, 'Offline', 'FUg8zCf2PYJ8ES9H9qvJyoj8Y9U4sDBMJGUMqmcRU6fTyI9clDr7tEIveVt1', '2019-06-27 03:36:28', '2019-06-27 03:36:28'),
 (2, 'User 2', 'Người dùng 2', 'user2@gmail.com', '$2y$10$sUXOuMQwyf2XugYBakb2s.sITnX.nSitapOZeSL3fMYUtgace.09e', '0', 'ktx khu B, tphcm', '0102030405', 2, 'Offline', '2VCWHAm4jy5KgEVSJjThyT2oquEjiCy8pKUgN5IQV6lJXlUJsddeJaP5EIrJ', '2019-06-27 03:47:38', '2019-06-27 03:47:38'),
 (3, 'User 3', 'Người dùng 3', 'user3@gmail.com', '$2y$10$KOMmAO6ojBgnsIPw4AGtQ.c8y2QAwco/JoIkzS/YDf0D2yXc9LNAK', '1', 'ktx khu a, tphcm', '0123466787', 2, 'Offline', 'uaymbj1KoduLlD5nRxGz5saZ4BYTWLT5oG4pO6lzMmVSss1s0eIPj1bFXGH8', '2019-06-27 03:48:46', '2019-06-27 03:48:46'),
 (4, 'User 4', 'Người dùng 4', 'user4@gmail.com', '$2y$10$9xcBvU9SSZsWLZTUkO2DM.RLHaFSzERITYzykHvj7HBZQDJr5rc12', '0', 'ktx khu B, tphcm', '0123466788', 2, 'Offline', '20bLx2Xycaphx1MeTchdizAZKO6JuC07mZ8IzFsR', '2019-06-27 03:50:15', '2019-06-27 03:50:15'),
@@ -796,7 +769,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT cho bảng `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
@@ -808,13 +781,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
