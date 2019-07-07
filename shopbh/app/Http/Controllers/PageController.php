@@ -129,7 +129,7 @@ class PageController extends Controller
             $user->level = $request->rdoLevel;
         }
         $user->save();
-        Alert::success('Edit Your Account Success!');
+        Alert::success('Chỉnh sửa tài khoản thành công!');
         return redirect('myaccount');
     }
 
@@ -144,7 +144,7 @@ class PageController extends Controller
         $contact->note = $request->txtContact;
         $contact->status = 0;
         $contact->save();
-        Alert::success('Your submission is received and we will contact you soon.', 'Thank you!')->persistent('Close');
+        Alert::success('Đã nhận được phản hồi của bạn.', 'Cảm ơn!')->persistent('Đóng');
         return redirect()->back();
 
     }
@@ -187,11 +187,11 @@ class PageController extends Controller
         }
         if($product_buy->status == 1){
         Cart::add(array('id'=>$id,'name'=>$product_buy->name,'qty'=>1,'price'=>$price,'options'=>array('img'=>$product_buy->image,'size'=>$size->size,'alias'=>$product_buy->alias)));
-        Alert::success('Add to Cart Success!');
+        Alert::success('Thêm vào giỏ hàng thành công!');
         return redirect()->back();
         }
         else{
-            Alert::fail('Add to Cart fail!');
+            Alert::fail('Thêm vào giỏ hàng lỗi!');
             return redirect()->back();
         }
     }
@@ -206,7 +206,7 @@ class PageController extends Controller
             }else{
                 $price = $product->price_new;
             }
-            Alert::success('Add to Cart Success!');
+            Alert::success('Thêm vào giỏ hàng thành công!');
             Cart::add(array('id'=>$product_id,'name'=>$product->name,'qty'=>$qty,'price'=>$price,'options'=>array('img'=>$product->image,'size'=>$size,'alias'=>$product->alias)));
         }
         return redirect()->back();
@@ -306,7 +306,7 @@ class PageController extends Controller
                     }
                 }
                 Cart::destroy();
-                Alert::success('Thank You for Your Order!');
+                Alert::success('Cảm ơn bạn đã đặt hàng!');
                 return redirect('index');
 
             }else{
@@ -350,12 +350,12 @@ class PageController extends Controller
                     }
                 }
                 Cart::destroy();
-                Alert::success('Thank You for Your Order!');
+                Alert::success('Cảm ơn bạn đã đặt hàng!');
                 return redirect('index');
             }
 
         }else{
-            Alert::error('Something went wrong', 'Oops!');
+            Alert::error('Có lỗi', 'Rất tiếc!');
             return redirect()->route('cartinfo');
         }
         
@@ -404,7 +404,7 @@ class PageController extends Controller
                     }
                 }
                 Cart::destroy();
-                Alert::success('Thank You for Your Order!');
+                Alert::success('Cảm ơn bạn đã đặt hàng!');
                 return redirect('index');
 
             }else{
@@ -448,12 +448,12 @@ class PageController extends Controller
                     }
                 }
                 Cart::destroy();
-                Alert::success('Thank You for Your Order!');
+                Alert::success('Cảm ơn bạn đã đặt hàng!');
                 return redirect('index');
             }
 
         }else{
-            Alert::error('Something went wrong', 'Oops!');
+            Alert::error('Có lỗi', 'Rất tiếc!');
             return redirect()->route('cartinfo');
         }
         
