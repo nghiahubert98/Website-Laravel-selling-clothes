@@ -48,13 +48,17 @@
                   <div class="control-group">
                     <label class="control-label" >Nội dung:<span class="red">*</span></label>
                     <div class="controls">
-                    <textarea class="form-control" placeholder="Add comment here..." rows="6" name="txtContact">{!! old('txtContact') !!}</textarea>
+                    <textarea class="form-control" placeholder="Thêm nội dung ở đây..." rows="6" name="txtContact">{!! old('txtContact') !!}</textarea>
                     </div>
                   </div>
                 </div>
               </fieldset>
           </div>
         </div>
+        <div class="col-lg-4 pull-right">
+            <input type="submit" class="btn btn-orange pull-right" value="Gửi">
+            <a href="{!! url('index') !!}"><input type="" value="Tiếp tục mua hàng" class="btn btn-orange pull-right mr10"></a>
+          </div>
         </form>
       </div>        
     </div>
