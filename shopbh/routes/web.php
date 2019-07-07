@@ -53,8 +53,6 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function() {
 	Route::group(['prefix'=>'contact'],function() {
 		Route::get('list',['as'=>'admin.contact.list','uses'=>'ContactController@getList']);
 		Route::get('delete/{id}',['as'=>'admin.contact.getDelete','uses'=>'ContactController@getDelete']);
-		Route::get('edit/{id}',['as'=>'admin.contact.getEdit','uses'=>'ContactController@getEdit']);
-		Route::post('edit/{id}',['as'=>'admin.contact.postEdit','uses'=>'ContactController@postEdit']);
 	});
 });
 
