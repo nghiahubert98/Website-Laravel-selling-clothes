@@ -8,6 +8,7 @@ use App\User;
 use App\Order;
 use App\Order_detail;
 use App\Product;
+
 class BillController extends Controller
 {
     public function getList() {
@@ -15,8 +16,7 @@ class BillController extends Controller
                         ->join('users', 'users.id', '=', 'orders.user_id')
                         ->select('orders.*', 'users.fullname as fullname', 'users.email as email', 'users.address as address', 'users.phone as phone')
                         ->orderBy('orders.id','desc')
-                        ->get();
-                      
+                        ->get();         
 		return view('admin.bill.list',compact('customer'));
 		
 	}

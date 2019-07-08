@@ -152,6 +152,9 @@
                                 </button>
                             </a>
                         </li>
+                        <li>
+                            <a href="{!! url('admin/statistics/list') !!}"><i class="fa fa-bar-chart-o fa-fw"></i> Statistics <span class="fa arrow"></span></a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

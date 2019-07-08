@@ -10,6 +10,7 @@
         "gloudemans/shoppingcart": "^2.4",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
+        "nesbot/carbon": "^2.20",
         "srmklive/paypal": "~1.0",
         "uxweb/sweet-alert": "^1.4"
     },
