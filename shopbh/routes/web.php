@@ -54,6 +54,10 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function() {
 		Route::get('list',['as'=>'admin.contact.list','uses'=>'ContactController@getList']);
 		Route::get('delete/{id}',['as'=>'admin.contact.getDelete','uses'=>'ContactController@getDelete']);
 	});
+	Route::group(['prefix'=>'statistics'],function() {
+		Route::get('list',['as'=>'admin.statistics.getList','uses'=>'StatisticsController@getList']);
+		Route::get('edit/{id}',['as'=>'admin.statistics.getEdit','uses'=>'StatisticsController@getEdit']);
+	});
 });
 
 Route::get('product-cate/{id}/{alias}',['as'=>'productcate','uses'=>'PageController@productcate']);
