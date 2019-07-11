@@ -71,7 +71,7 @@ Route::get('myaccount',['as'=>'myaccount','uses'=>'PageController@myAccount']);
 Route::get('order-history',['as'=>'orderhistory','uses'=>'PageController@orderhistory']);
 
 Route::get('edit-account',['as'=>'editaccount','uses'=>'PageController@getEditAccount']);
-Route::post('edit-account',['as'=>'editaccount','uses'=>'PageController@postEditAccount']);
+Route::post('post-edit-account',['as'=>'posteditaccount','uses'=>'PageController@postEditAccount']);
 
 Route::get('add-to-cart/{id}/{alias}',['as'=>'addtocart','uses'=>'PageController@addtocart']);
 Route::post('cart',['as'=>'cart','uses'=>'PageController@cart']);
