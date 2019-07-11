@@ -17,7 +17,7 @@
         <!-- My Account-->
       <div class="col-lg-9">
         <h1 class="heading1"><span class="maintext">Chỉnh sửa tài khoản</span><span class="subtext">Chỉnh sửa thông tin tài khoản</span></h1>  
-      <form action="" method="POST">
+      <form action="{!! url('post-edit-account') !!}" method="POST">
             <input type="hidden" name="_token" value="{!! csrf_token() !!}">
             <div class="form-group">
                 <label>Tên người dùng</label>

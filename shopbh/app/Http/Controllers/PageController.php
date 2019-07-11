@@ -17,6 +17,7 @@ use Cart;
 use Alert;
 use Illuminate\Http\Request;
 use Srmklive\PayPal\Services\ExpressCheckout;
+use Illuminate\Support\Facades\Hash;
 
 
 class PageController extends Controller
